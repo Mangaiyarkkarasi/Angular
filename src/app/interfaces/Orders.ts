@@ -1,5 +1,4 @@
 export interface Orders{
-    id:String;
     name:String;
     numberOfItems:number;
     amount:number;
