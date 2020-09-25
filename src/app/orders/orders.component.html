@@ -1,0 +1,48 @@
+<p class="center">Order Details</p>
+<table class="center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Customer Name</th>
+            <th>No of items</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of orderArray">
+        <tr (click)="item.expanded=!item.expanded">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.numberOfItems}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.status}}</td>
+            <td><button (click)="changeStatus(item)">Change status</button></td>
+        </tr>
+        <ng-container *ngIf="item.expanded">
+            <div>
+                <p>Customer Detail</p>
+                <tr>
+                    <td>Customer Name:</td>
+                    <td>{{item.custName}}</td>
+                </tr>
+                <tr>
+                    <td>Item Name:</td>
+                    <td>{{item.name}}</td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <td>{{item.price}}</td>
+                </tr>
+                <tr>
+                    <td>Total Price:</td>
+                    <td>{{item.totalPrice}}</td>
+                </tr>
+                <tr>
+                    <td>Delivery Address:</td>
+                    <td>{{item.address}}</td>
+                </tr>
+            </div>
+        </ng-container>
+        
+    </tbody>
+</table>

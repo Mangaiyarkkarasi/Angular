@@ -1,0 +1,33 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table
+  {
+      width:60%;
+      border:4px solid gray;
+      padding:4px;
+  }
+  thead
+  {
+      background-color:gray;
+      padding:2px;
+
+  }
+  td
+  {
+      padding:2px;
+  }
+  th
+  {
+      padding: 0 2px 5px;
+      line-height: 15px;
+  }
+
+//   tr.separated td {
+//     /* set border style for separated rows */
+//     border-bottom: 1px solid black;
+//     width:60%;
+
+// } 
